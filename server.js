@@ -11,6 +11,7 @@ connectDB();
 
 // Route Files
 const bootCamps = require("./routes/bootcamps");
+const courses = require("./routes/courses");
 
 // middleware files
 const logger = require("./middleware/logger");
@@ -36,6 +37,7 @@ if (ENVIRONMENT === "development") {
 
 // Mount routers
 app.use("/api/v1/bootcamps", bootCamps);
+app.use("/api/v1/courses", courses);
 
 // Error Handler
 app.use(errorHandler);
