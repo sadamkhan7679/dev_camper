@@ -41,6 +41,11 @@ const CourseSchema = new mongoose.Schema({
     ref: "Bootcamp",
     required: [true, "Please add a bootcamp"],
   },
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: [true, "Please add a user"],
+  },
 });
 
 // Static method to get average cost
